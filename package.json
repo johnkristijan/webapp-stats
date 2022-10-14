@@ -1,0 +1,25 @@
+{
+  "name": "webapp-stats",
+  "version": "1.0.0",
+  "description": "Simple usage statistics for you webapp - which urls/pages/routes did the user visit? which parts of the app is most used? less used?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnkristijan/webapp-stats.git"
+  },
+  "keywords": [
+    "webapp",
+    "stats",
+    "analytics",
+    "usage"
+  ],
+  "author": "John K Hermann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnkristijan/webapp-stats/issues"
+  },
+  "homepage": "https://github.com/johnkristijan/webapp-stats#readme"
+}
