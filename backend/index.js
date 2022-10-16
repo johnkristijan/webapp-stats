@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.send('Server is alive and well!')
 })
 
-app.post('/stats-eater', (req, res) => {
+app.post('/webapp-stats', (req, res) => {
     console.log('API triggered')
     const body = req.body
     console.table(body)
