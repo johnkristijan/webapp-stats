@@ -4,7 +4,7 @@
   "description": "Simple usage statistics for you webapp - which urls/pages/routes did the user visit? which parts of the app is most used? less used?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/index.js"
   },
   "repository": {
     "type": "git",
