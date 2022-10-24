@@ -2,15 +2,17 @@
 
 Simple and light-weight webapp usage tracker. Currently only supporting **vue.js** and is meant to be used with **Vue router**.
 
-```
-Simple usage statistics for you webapp - which urls/pages/routes did the user visit?
-```
+*Simple usage statistics for you webapp - which urls/pages/routes did the user visit?*
+
+
 
 ## Install
 
 ```
 npm install webapp-stats
 ```
+
+
 
 ## Usage
 
@@ -29,6 +31,8 @@ The possible inputs to the webappStatTrack functions are:
 - senderDebounceLimit (local log list size buffer - default is 10)
 - username (provide username if you want - default is 'anonymous')
 
+
+
 ## How to get an appId?
 
 Register your app by doing an API call with the following query parameters.
@@ -37,8 +41,10 @@ Register your app by doing an API call with the following query parameters.
 https://europe-west3-mlink-test.cloudfunctions.net/webapp-
 stats-backend?type=register&app_name=JohnsApp&app_contact=john@gmail.com
 ```
-
+Update the query parameters `app_name` and `app_contact` and run a GET request.
 If successful, it will respond with HTTP status code 201 and an appId (UUID).
+
+
 
 ## What is being logged?
 
@@ -57,6 +63,8 @@ This is an example log entry:
 }
 ```
 
+
+
 ## So, how do I see the usage statistics?
 
 That is simple, too.
@@ -67,6 +75,10 @@ https://europe-west3-mlink-test.cloudfunctions.net/webapp-stats-backend?type=get
 ```
 You will receive a list of all the log entries.
 
+
+
 ## Roadmap / coming features
 - Add support for React
 - Add support for usage outside vue router
+
+
