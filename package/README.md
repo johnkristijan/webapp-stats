@@ -21,6 +21,7 @@ import webappStatTrack from 'webapp-stats'
 ...
 router.beforeEach((to, from) => {
     const appId = "22c4c3f7-609d-4bd2-a239-8bebfc8b59e4"
+    const urlPrefix = "https://backend.myserver.org";
     webappStatTrack(to, from, appId, urlPrefix)
 })
 ```
@@ -28,7 +29,7 @@ The possible inputs to the webappStatTrack functions are:
 - `to` (vue router object - required)
 - `from` (vue router object required)
 - `appId` (UUID for your app - obtained via the app registration API)
-- `urlPrefix` server url prefix for the backend service that receives the stats
+- `urlPrefix` server url prefix for the backend service that receives the stats ([example backend setup in node/express and psql](https://github.com/johnkristijan/webapp-stats-backend))
 - `senderDebounceLimit` (local log list size buffer - default is 10)
 - `username` (provide username if you want - default is 'anonymous')
 
