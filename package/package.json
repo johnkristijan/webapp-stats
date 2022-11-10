@@ -1,6 +1,6 @@
 {
   "name": "webapp-stats",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple usage statistics for you webapp - which urls/pages/routes did the user visit?",
   "main": "index.js",
   "scripts": {

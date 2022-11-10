@@ -16,17 +16,17 @@ const clearLocalStorage = () => {
   localStorage.setItem("webapp-stat-buffer", "[]");
 };
 
-const sendStats = (statList) => {
+const sendStats = (statList, urlPrefix) => {
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
   const body = JSON.stringify(statList);
   const method = "POST";
   const requestOptions = { method, headers, body };
-  const url = "https://europe-west3-mlink-test.cloudfunctions.net/webapp-stats-backend?type=webapp-stats";
+  const url = urlPrefix + "/webapp-stats-backend?type=webapp-stats";
   fetch(url, requestOptions);
 };
 
-const webappStatTrack = async (to, from, appId, senderDebounceLimit = 10, username = "anonymous") => {
+const webappStatTrack = async (to, from, appId, urlPrefix, senderDebounceLimit = 10, username = "anonymous") => {
   try {
     ifUndefinedPopulateWithEmptyList();
     const baseUrl = window.location.origin;
@@ -46,7 +46,7 @@ const webappStatTrack = async (to, from, appId, senderDebounceLimit = 10, userna
     const listLength = currentList.length;
 
     if (listLength >= senderDebounceLimit) {
-      sendStats(currentList);
+      sendStats(currentList, urlPrefix);
       clearLocalStorage();
     }
   } catch (e) {
